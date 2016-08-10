@@ -82,7 +82,7 @@ nav ul {
 }
 
 #about-intro {
-    margin: 0 3.5em;
+    margin: 0 3.5em 1em;
     padding-bottom: 1.5em;
     overflow: hidden;
     border-bottom: 4px double #dbd9d4;
@@ -113,7 +113,10 @@ nav ul {
     @media only screen and (max-width: 768px) {
         float: none;
         width: 100%;
-        font-size: 1.5em;
+        font-size: 1.2em;
+        h2 {
+            font-size: 0.7em;
+        }
     }
 }
 
@@ -140,6 +143,10 @@ nav ul {
             color: $main-color;
         }
     }
+    @media only screen and (max-width: 768px) {
+        column-count: 1;
+        font-size: 0.6em;
+    }
 }
 
 #photo {
@@ -150,13 +157,52 @@ nav ul {
     }
 }
 
-#skills-wrap {
+#process-wrap {
+    margin: 0 3.5em;
+    h2 {
+        margin: 0;
+        color: darkgray;
+        font-family: Georgia, serif;
+        font-variant: small-caps;
+        font-weight: 300;
+        letter-spacing: 0.1em;
+        font-size: 1.075em;
+        border-bottom: 1px solid #dbd9d4;
+        line-height: 2.5em;
+    }
     ul {
         list-style-type: none;
+        padding: 0;
+        overflow: hidden;
         li {
+            text-align: center;
             display: inline-block;
             width: 20%;
             float: left;
+            h3 {
+                font-weight: 400;
+                font-variant: small-caps;
+                font-size: 1em;
+                letter-spacing: 0.05em;
+                @media only screen and (max-width: 500px) {
+                    font-size: 0.55em;
+                    text-rendering: optimizeLegibility;
+                }
+            }
+            img {
+                width: 50%;
+            }
+            @media only screen and (max-width: 500px) {
+                width: 50%;
+            }
+        }
+    }
+    @media only screen and (max-width: 500px) {
+        margin: 0 1.5em;
+        h2 {
+            text-rendering: optimizeLegibility;
+            line-height: 3em;
+            font-size: 0.8em;
         }
     }
 }

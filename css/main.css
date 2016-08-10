@@ -68,7 +68,7 @@ nav ul {
   text-decoration: underline; }
 
 #about-intro {
-  margin: 0 3.5em;
+  margin: 0 3.5em 1em;
   padding-bottom: 1.5em;
   overflow: hidden;
   border-bottom: 4px double #dbd9d4; }
@@ -98,7 +98,9 @@ nav ul {
     .intro-text {
       float: none;
       width: 100%;
-      font-size: 1.5em; } }
+      font-size: 1.2em; }
+      .intro-text h2 {
+        font-size: 0.7em; } }
 
 .intro {
   margin: 0 0 0.5em 0;
@@ -120,6 +122,10 @@ nav ul {
     transition: 0.2s color ease-in-out; }
     .intro-sub a:hover {
       color: #ee8691; }
+  @media only screen and (max-width: 768px) {
+    .intro-sub {
+      column-count: 1;
+      font-size: 0.6em; } }
 
 #photo {
   width: 36%;
@@ -128,11 +134,47 @@ nav ul {
     #photo {
       display: none; } }
 
-#skills-wrap ul {
-  list-style-type: none; }
-  #skills-wrap ul li {
-    display: inline-block;
-    width: 20%;
-    float: left; }
+#process-wrap {
+  margin: 0 3.5em; }
+  #process-wrap h2 {
+    margin: 0;
+    color: darkgray;
+    font-family: Georgia, serif;
+    font-variant: small-caps;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    font-size: 1.075em;
+    border-bottom: 1px solid #dbd9d4;
+    line-height: 2.5em; }
+  #process-wrap ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden; }
+    #process-wrap ul li {
+      text-align: center;
+      display: inline-block;
+      width: 20%;
+      float: left; }
+      #process-wrap ul li h3 {
+        font-weight: 400;
+        font-variant: small-caps;
+        font-size: 1em;
+        letter-spacing: 0.05em; }
+        @media only screen and (max-width: 500px) {
+          #process-wrap ul li h3 {
+            font-size: 0.55em;
+            text-rendering: optimizeLegibility; } }
+      #process-wrap ul li img {
+        width: 50%; }
+      @media only screen and (max-width: 500px) {
+        #process-wrap ul li {
+          width: 50%; } }
+  @media only screen and (max-width: 500px) {
+    #process-wrap {
+      margin: 0 1.5em; }
+      #process-wrap h2 {
+        text-rendering: optimizeLegibility;
+        line-height: 3em;
+        font-size: 0.8em; } }
 
 /*# sourceMappingURL=main.css.map */
