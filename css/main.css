@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+  background: url("../images/pink_rice.png") repeat; }
+
+.current-page {
+  color: #ee8691; }
+
+#page-wrapper {
+  margin: 0 2em;
+  padding: 0 3em;
+  min-height: 400px;
+  background: #fff;
+  box-shadow: 0 0 5px #a2a2a2;
+  -moz-box-shadow: 0 0 5px #a2a2a2;
+  -webkit-box-shadow: 0 0 5px #a2a2a2;
+  position: relative;
+  overflow: hidden; }
+  @media only screen and (max-width: 768px) {
+    #page-wrapper {
+      padding: 0 1em;
+      margin: 0; } }
+
+header {
+  margin: 1em auto 0px;
+  padding: 0 4em;
+  position: relative;
+  max-width: 1000px; }
+  @media only screen and (max-width: 768px) {
+    header {
+      padding: 0 1.5em 1em; } }
+
+#logo-name {
+  font-family: HenryMorganHand, Georgia, serif;
+  font-size: 2.75em; }
+  #logo-name a {
+    color: #000;
+    text-decoration: none;
+    letter-spacing: 0;
+    transition: 0.2s color ease-in-out; }
+    #logo-name a:hover {
+      color: #ee8691; }
+  @media only screen and (max-width: 768px) {
+    #logo-name {
+      font-size: 1.5em; } }
+
+nav ul {
+  list-style-type: none;
+  right: 3.5em;
+  text-align: right;
+  position: absolute;
+  top: 0; }
+  nav ul li {
+    display: inline-block;
+    padding: 0 0.5em; }
+    nav ul li a {
+      font-family: Calibri, Arial, sans-serif;
+      font-weight: 200;
+      font-size: 1em;
+      color: #000;
+      text-decoration: none; }
+      nav ul li a:hover {
+        color: palevioletred; }
+  @media only screen and (max-width: 500px) {
+    nav ul {
+      display: none; } }
+
+#resume {
+  text-decoration: underline; }
+
+#about-intro {
+  margin: 0 3.5em;
+  padding-bottom: 1.5em;
+  overflow: hidden;
+  border-bottom: 4px double #dbd9d4; }
+  @media only screen and (max-width: 768px) {
+    #about-intro {
+      margin: 0 1.5em; } }
+
+.intro-text {
+  position: relative;
+  float: left;
+  width: 59%;
+  font-size: 2.15em;
+  line-height: 1.25em;
+  font-family: Calibri, Arial, sans-serif;
+  font-weight: 300; }
+  .intro-text h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 0.5em;
+    font-family: Georgia, serif;
+    font-weight: 300;
+    font-variant: small-caps;
+    letter-spacing: 0.1em;
+    color: darkgray;
+    border-bottom: 1px solid #dbd9d4; }
+  @media only screen and (max-width: 768px) {
+    .intro-text {
+      float: none;
+      width: 100%;
+      font-size: 1.5em; } }
+
+.intro {
+  margin: 0 0 0.5em 0;
+  padding-bottom: 1em;
+  border-bottom: 4px double #dbd9d4; }
+
+.intro-sub {
+  font-size: 0.4em;
+  font-family: Georgia;
+  line-height: 1.5;
+  column-count: 2;
+  column-gap: 1em;
+  margin: 0;
+  padding: 1.5em 0 0.5em; }
+  .intro-sub a {
+    text-decoration: none;
+    border-bottom: 1px dotted #a2a2a2;
+    color: black;
+    transition: 0.2s color ease-in-out; }
+    .intro-sub a:hover {
+      color: #ee8691; }
+
+#photo {
+  width: 36%;
+  padding: 0 0 0 3em; }
+  @media only screen and (max-width: 768px) {
+    #photo {
+      display: none; } }
+
+#skills-wrap ul {
+  list-style-type: none; }
+  #skills-wrap ul li {
+    display: inline-block;
+    width: 20%;
+    float: left; }
+
+/*# sourceMappingURL=main.css.map */
