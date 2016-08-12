@@ -11,7 +11,7 @@ body {
 
 #page-wrapper {
     margin: 0 2em;
-    padding: 0 3em;
+    padding: 0 3em 2em;;
     min-height: 400px;
     background: #fff;
     box-shadow: 0 0 5px #a2a2a2;
@@ -27,12 +27,27 @@ body {
 
 header {
     margin: 1em auto 0px;
-    padding: 0 4em;
+    padding: 0 3.5em;
     position: relative;
     max-width: 1000px;
     @media only screen and (max-width: 768px) {
         padding: 0 1.5em 1em;
     }
+}
+
+#logo-img {
+    float: left;
+    padding-right: 0.5em;
+    width: 40px;
+    opacity: 1;
+    transition: 0.3s opacity ease-in-out;
+    &:hover {
+        opacity: 0.7;
+    }
+    @media only screen and (max-width: 768px) {
+        width: 23px;
+        padding-right: 0.3em;
+    }   
 }
 
 #logo-name {
@@ -42,7 +57,7 @@ header {
         color: #000;
         text-decoration: none;
         letter-spacing: 0;
-        transition: 0.2s color ease-in-out;
+        transition: 0.3s color ease-in-out;
         &:hover {
             color: $main-color;
         }
@@ -94,7 +109,7 @@ nav ul {
 .intro-text {
     position: relative;
     float: left;
-    width: 59%;
+    width: 62%;
     font-size: 2.15em;
     line-height: 1.25em;
     font-family: Calibri, Arial, sans-serif;
@@ -110,6 +125,12 @@ nav ul {
         color: darkgray;
         border-bottom: 1px solid #dbd9d4;
     }
+    @media only screen and (max-width: 1200px) {
+        font-size: 1.8em;
+    }
+    @media only screen and (max-width: 900px) {
+        font-size: 1.5em;
+    }    
     @media only screen and (max-width: 768px) {
         float: none;
         width: 100%;
@@ -127,7 +148,7 @@ nav ul {
 }
 
 .intro-sub {
-    font-size: 0.4em;
+    font-size: 0.35em;
     font-family: Georgia;
     line-height: 1.5;
     column-count: 2;
@@ -143,22 +164,84 @@ nav ul {
             color: $main-color;
         }
     }
+    @media only screen and (max-width: 900px) {
+        font-size: 0.45em;
+    }    
     @media only screen and (max-width: 768px) {
         column-count: 1;
         font-size: 0.6em;
     }
 }
 
-#photo {
-    width: 36%;
-    padding: 0 0 0 3em;
+.intro-img {
+    float: right;
+    width: 33%;
+    height: 450px;
+    background: url("../images/intro-photo.jpg");
+    background-position: bottom;
+    background-size: cover;
+    @media only screen and (max-width: 1200px) {
+        height: 400px;
+    }
+    @media only screen and (max-width: 900px) {
+        height:480px;
+    }    
     @media only screen and (max-width: 768px) {
         display: none;
+    }    
+}
+
+#select-wrap {
+    margin: 0 3.5em;
+    overflow: hidden;
+    @media only screen and (max-width: 500px) {
+        margin: 0 1.5em;
     }
 }
 
-#process-wrap {
-    margin: 0 3.5em;
+#books-wrap {
+    width: 28%;
+    float: right;
+    padding-bottom: 2em;
+    h2 {
+        margin: 0;
+        color: darkgray;
+        font-family: Georgia, serif;
+        font-variant: small-caps;
+        font-weight: 300;
+        letter-spacing: 0.1em;
+        font-size: 1.075em;
+        border-bottom: 1px solid #dbd9d4;
+        line-height: 2.5em;
+    }
+    h3 {
+        font-family: Calibri, Arial, sans-serif;
+        font-weight: 300;
+        font-size: 1em;
+        margin: 2em 0 0;
+    }
+    small {
+        font-family: Georgia, serif;
+        font-style: italic;
+        font-size: 0.7em;
+    }
+    @media only screen and (max-width: 768px) {
+        h2 {
+            text-rendering: optimizeLegibility;
+            line-height: 3em;
+            font-size: 0.8em;
+        }
+    }
+    @media only screen and (max-width: 500px) {
+        width: 100%;
+        float: none;
+    }
+}
+
+#work-wrap {
+    width: 68%;
+    float: left;
+    overflow: hidden;
     h2 {
         margin: 0;
         color: darkgray;
@@ -173,36 +256,289 @@ nav ul {
     ul {
         list-style-type: none;
         padding: 0;
-        overflow: hidden;
         li {
-            text-align: center;
-            display: inline-block;
-            width: 20%;
+            width: 33.33%;
             float: left;
+            padding: 0 0 2em;
+            overflow: hidden;
+            small {
+                font-style: italic;
+                font-family: Georgia, serif;
+                font-size: 0.7em;
+            }
             h3 {
-                font-weight: 400;
+                margin: 0;
+                font-family: Georgia, serif;
                 font-variant: small-caps;
-                font-size: 1em;
-                letter-spacing: 0.05em;
-                @media only screen and (max-width: 500px) {
-                    font-size: 0.55em;
-                    text-rendering: optimizeLegibility;
-                }
+                font-weight: 300;
             }
-            img {
-                width: 50%;
+            .select-img {
+                margin-top: 0.5em;
+                width: 80%;
+                height: 175px;
             }
-            @media only screen and (max-width: 500px) {
-                width: 50%;
+            .design {
+                background: url("../images/stashd.png") no-repeat top left;
+                background-size: cover;
+            }
+            .responsive {
+                background: url("../images/db-features.png") no-repeat top center;
+                background-size: cover;
+                border: 1px solid #dbd9d4;
+            }
+            .wysiwyg {
+                background: url("../images/smacs.jpg") no-repeat top left;
+                background-size: cover;
+                border: 1px solid #dbd9d4;
             }
         }
     }
     @media only screen and (max-width: 500px) {
-        margin: 0 1.5em;
-        h2 {
-            text-rendering: optimizeLegibility;
-            line-height: 3em;
+        width: 100%;
+        float: none;
+        h3 {
             font-size: 0.8em;
         }
+        ul li {
+            width: 50%;
+            padding: 0 0 1em;
+            .select-img {
+                width: 95%;
+                height: 90px;
+            }
+        }
+    }
+}
+
+#about-photo {
+    margin: 0 3.5em;
+    height: 275px;
+    background: url("../images/about-photo.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#experience {
+    border-top: 4px double #dbd9d4;
+    margin: 1.5em 3.5em 0;
+    h2 {
+        margin: 0;
+        padding: 0;
+        font-weight: 300;
+        font-variant: small-caps;
+        font-size: 1.2em;
+        letter-spacing: 0.1em;
+        color: darkgray;
+        border-bottom: 1px solid #dbd9d4;
+        line-height: 2.3em;
+    }
+    @media only screen and (max-width: 768px) {
+        margin: 0.5em 1.5em;
+        h2 {
+            font-size: 0.9em;
+        }
+    }
+}
+
+.exp-content {
+    display: inline-block;
+    @media only screen and (max-width: 1100px) {
+        width: 71%;
+    }
+    @media only screen and (max-width: 768px) {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+}
+
+.timeline {
+    margin: 1em 0;
+}
+
+.timeline-left {
+    width: 100%;
+    display: block;
+    float: left;
+    text-align: right;
+    h4 {
+        text-align: center;
+        font-weight: 300;
+        font-size: 1em;
+        font-style: italic;
+    }
+    @media only screen and (max-width: 500px) {
+        width: 100%;
+    }
+}
+
+.timeline-right {
+    margin: 0 auto;
+    width: 70%;
+    display: block;
+    //border-left: 4px double $main-color;
+    //border-radius: 20px 0 0 20px;
+    padding: 0.2em 0 0.5em 0;
+    h5 {
+        text-align: center;
+        //border-bottom: 1px solid #dbd9d4;
+        line-height: 0.8em;
+        font-size: 2em;
+        //font-weight: 300;
+        margin: 0.5em 0 0.5em;
+        font-family: HenryMorganHand, Georgia, serif;
+        //color: $main-color;
+    }
+    p {
+        text-indent: 1.5em;
+        margin: 0;
+        font-size: 1.1em;
+        letter-spacing: 0.05sem;
+        line-height: 1.5em;
+    }
+    .first-p {
+        text-indent: 0;
+    }
+    .first-letter {
+        color: #fff;
+        font-size: 3.5em;
+        padding: 0.1em 0.3em;
+        margin: -0.1em 0.2em 0 0;
+        background: $main-color;
+        float: left;
+        border: 1px dotted #fff;
+        border-radius: 10px 5px;
+    }
+    .caps {
+        text-transform: uppercase;
+    }
+    @media only screen and (max-width: 1100px) {
+        width: 80%;
+    }
+    @media only screen and (max-width: 500px) {
+        width: 100%;
+        border: 0;
+        padding: 0;
+        h5 {
+            text-align: center;
+        }
+    }
+}
+
+.sidebar {
+    display: inline-block;
+    width: 25%;
+    #skills-grid {
+        padding: 0;
+        list-style-type: none;
+        > li {
+            text-align: center;
+            display: inline-block;
+            width: 100%;
+            float: left;
+            padding: 2em 0 0;
+            @media only screen and (max-width: 768px) {
+                width: 33.33%;
+            }
+            @media only screen and (max-width: 500px) {
+                width: 50%;
+            }
+            h3 {
+                margin: 0;
+                font-family: Calibri, Arial, serif;
+                font-size: 1em;
+                line-height: 1.2em;
+                font-weight: 200;
+                //border-bottom: 1px dotted #dbd9d4;
+                font-variant: small-caps;
+            }
+            p {
+                font-size: 0.8em;
+            }
+            ul {
+                list-style-type: none;
+                padding: 0;
+                margin-top: 1em;
+                li {
+                    font-size: 0.8em;
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+    }
+}
+
+footer {
+    margin: 0 3.5em;
+    overflow: hidden;
+    padding-bottom: 2em;
+    border-top: 4px double #dbd9d4;
+    @media only screen and (max-width: 500px) {
+        margin: 0 1em;
+    }
+}
+
+#contact {
+    display: inline-block;
+    width: 48%;
+    h2 {
+        font-size: 1em;
+        font-family: Georgia, serif;
+        font-weight: 300;
+        font-variant: small-caps;
+        color: #a2a2a2;
+        letter-spacing: 0.1em;
+        border-bottom: 1px solid #dbd9d4;
+        line-height: 2em;
+        margin-bottom: 1em;
+    }
+    h3 {
+        border-bottom: 1px solid #dbd9d4;
+        padding-bottom: 0.2em;
+        margin-bottom: 0.5em;
+    }
+    a {
+        line-height: 2em;
+        color: #000;
+        text-decoration: none;
+        font-family: Calibri, Arial, sans-serif;
+        font-weight: 300;
+        &:hover {
+            color: $main-color;
+        }
+    }
+    @media only screen and (max-width: 500px) {
+        width: 100%;
+    }
+}
+
+#connect {
+    display: inline-block;
+    float: right;
+    width: 48%;
+    h2 {
+        font-size: 1em;
+        font-family: Georgia, serif;
+        font-weight: 300;
+        font-variant: small-caps;
+        color: #a2a2a2;
+        letter-spacing: 0.1em;
+        border-bottom: 1px solid #dbd9d4;
+        line-height: 2em;
+        margin-bottom: 1em;
+    }
+    i {
+        font-size: 2.5em;
+        color: $main-color;
+        padding: 0 0.2em 0 0;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    @media only screen and (max-width: 500px) {
+        width: 100%;
     }
 }

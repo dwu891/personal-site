@@ -7,7 +7,7 @@ body {
 
 #page-wrapper {
   margin: 0 2em;
-  padding: 0 3em;
+  padding: 0 3em 2em;
   min-height: 400px;
   background: #fff;
   box-shadow: 0 0 5px #a2a2a2;
@@ -22,12 +22,25 @@ body {
 
 header {
   margin: 1em auto 0px;
-  padding: 0 4em;
+  padding: 0 3.5em;
   position: relative;
   max-width: 1000px; }
   @media only screen and (max-width: 768px) {
     header {
       padding: 0 1.5em 1em; } }
+
+#logo-img {
+  float: left;
+  padding-right: 0.5em;
+  width: 40px;
+  opacity: 1;
+  transition: 0.3s opacity ease-in-out; }
+  #logo-img:hover {
+    opacity: 0.7; }
+  @media only screen and (max-width: 768px) {
+    #logo-img {
+      width: 23px;
+      padding-right: 0.3em; } }
 
 #logo-name {
   font-family: HenryMorganHand, Georgia, serif;
@@ -36,7 +49,7 @@ header {
     color: #000;
     text-decoration: none;
     letter-spacing: 0;
-    transition: 0.2s color ease-in-out; }
+    transition: 0.3s color ease-in-out; }
     #logo-name a:hover {
       color: #ee8691; }
   @media only screen and (max-width: 768px) {
@@ -79,7 +92,7 @@ nav ul {
 .intro-text {
   position: relative;
   float: left;
-  width: 59%;
+  width: 62%;
   font-size: 2.15em;
   line-height: 1.25em;
   font-family: Calibri, Arial, sans-serif;
@@ -94,6 +107,12 @@ nav ul {
     letter-spacing: 0.1em;
     color: darkgray;
     border-bottom: 1px solid #dbd9d4; }
+  @media only screen and (max-width: 1200px) {
+    .intro-text {
+      font-size: 1.8em; } }
+  @media only screen and (max-width: 900px) {
+    .intro-text {
+      font-size: 1.5em; } }
   @media only screen and (max-width: 768px) {
     .intro-text {
       float: none;
@@ -108,7 +127,7 @@ nav ul {
   border-bottom: 4px double #dbd9d4; }
 
 .intro-sub {
-  font-size: 0.4em;
+  font-size: 0.35em;
   font-family: Georgia;
   line-height: 1.5;
   column-count: 2;
@@ -122,21 +141,43 @@ nav ul {
     transition: 0.2s color ease-in-out; }
     .intro-sub a:hover {
       color: #ee8691; }
+  @media only screen and (max-width: 900px) {
+    .intro-sub {
+      font-size: 0.45em; } }
   @media only screen and (max-width: 768px) {
     .intro-sub {
       column-count: 1;
       font-size: 0.6em; } }
 
-#photo {
-  width: 36%;
-  padding: 0 0 0 3em; }
+.intro-img {
+  float: right;
+  width: 33%;
+  height: 450px;
+  background: url("../images/intro-photo.jpg");
+  background-position: bottom;
+  background-size: cover; }
+  @media only screen and (max-width: 1200px) {
+    .intro-img {
+      height: 400px; } }
+  @media only screen and (max-width: 900px) {
+    .intro-img {
+      height: 480px; } }
   @media only screen and (max-width: 768px) {
-    #photo {
+    .intro-img {
       display: none; } }
 
-#process-wrap {
-  margin: 0 3.5em; }
-  #process-wrap h2 {
+#select-wrap {
+  margin: 0 3.5em;
+  overflow: hidden; }
+  @media only screen and (max-width: 500px) {
+    #select-wrap {
+      margin: 0 1.5em; } }
+
+#books-wrap {
+  width: 28%;
+  float: right;
+  padding-bottom: 2em; }
+  #books-wrap h2 {
     margin: 0;
     color: darkgray;
     font-family: Georgia, serif;
@@ -146,35 +187,277 @@ nav ul {
     font-size: 1.075em;
     border-bottom: 1px solid #dbd9d4;
     line-height: 2.5em; }
-  #process-wrap ul {
+  #books-wrap h3 {
+    font-family: Calibri, Arial, sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+    margin: 2em 0 0; }
+  #books-wrap small {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 0.7em; }
+  @media only screen and (max-width: 768px) {
+    #books-wrap h2 {
+      text-rendering: optimizeLegibility;
+      line-height: 3em;
+      font-size: 0.8em; } }
+  @media only screen and (max-width: 500px) {
+    #books-wrap {
+      width: 100%;
+      float: none; } }
+
+#work-wrap {
+  width: 68%;
+  float: left;
+  overflow: hidden; }
+  #work-wrap h2 {
+    margin: 0;
+    color: darkgray;
+    font-family: Georgia, serif;
+    font-variant: small-caps;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    font-size: 1.075em;
+    border-bottom: 1px solid #dbd9d4;
+    line-height: 2.5em; }
+  #work-wrap ul {
     list-style-type: none;
+    padding: 0; }
+    #work-wrap ul li {
+      width: 33.33%;
+      float: left;
+      padding: 0 0 2em;
+      overflow: hidden; }
+      #work-wrap ul li small {
+        font-style: italic;
+        font-family: Georgia, serif;
+        font-size: 0.7em; }
+      #work-wrap ul li h3 {
+        margin: 0;
+        font-family: Georgia, serif;
+        font-variant: small-caps;
+        font-weight: 300; }
+      #work-wrap ul li .select-img {
+        margin-top: 0.5em;
+        width: 80%;
+        height: 175px; }
+      #work-wrap ul li .design {
+        background: url("../images/stashd.png") no-repeat top left;
+        background-size: cover; }
+      #work-wrap ul li .responsive {
+        background: url("../images/db-features.png") no-repeat top center;
+        background-size: cover;
+        border: 1px solid #dbd9d4; }
+      #work-wrap ul li .wysiwyg {
+        background: url("../images/smacs.jpg") no-repeat top left;
+        background-size: cover;
+        border: 1px solid #dbd9d4; }
+  @media only screen and (max-width: 500px) {
+    #work-wrap {
+      width: 100%;
+      float: none; }
+      #work-wrap h3 {
+        font-size: 0.8em; }
+      #work-wrap ul li {
+        width: 50%;
+        padding: 0 0 1em; }
+        #work-wrap ul li .select-img {
+          width: 95%;
+          height: 90px; } }
+
+#about-photo {
+  margin: 0 3.5em;
+  height: 275px;
+  background: url("../images/about-photo.jpg");
+  background-size: cover;
+  background-position: center; }
+
+#experience {
+  border-top: 4px double #dbd9d4;
+  margin: 1.5em 3.5em 0; }
+  #experience h2 {
+    margin: 0;
     padding: 0;
-    overflow: hidden; }
-    #process-wrap ul li {
+    font-weight: 300;
+    font-variant: small-caps;
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+    color: darkgray;
+    border-bottom: 1px solid #dbd9d4;
+    line-height: 2.3em; }
+  @media only screen and (max-width: 768px) {
+    #experience {
+      margin: 0.5em 1.5em; }
+      #experience h2 {
+        font-size: 0.9em; } }
+
+.exp-content {
+  display: inline-block; }
+  @media only screen and (max-width: 1100px) {
+    .exp-content {
+      width: 71%; } }
+  @media only screen and (max-width: 768px) {
+    .exp-content {
+      display: block;
+      width: 100%;
+      margin: 0; } }
+
+.timeline {
+  margin: 1em 0; }
+
+.timeline-left {
+  width: 100%;
+  display: block;
+  float: left;
+  text-align: right; }
+  .timeline-left h4 {
+    text-align: center;
+    font-weight: 300;
+    font-size: 1em;
+    font-style: italic; }
+  @media only screen and (max-width: 500px) {
+    .timeline-left {
+      width: 100%; } }
+
+.timeline-right {
+  margin: 0 auto;
+  width: 70%;
+  display: block;
+  padding: 0.2em 0 0.5em 0; }
+  .timeline-right h5 {
+    text-align: center;
+    line-height: 0.8em;
+    font-size: 2em;
+    margin: 0.5em 0 0.5em;
+    font-family: HenryMorganHand, Georgia, serif; }
+  .timeline-right p {
+    text-indent: 1.5em;
+    margin: 0;
+    font-size: 1.1em;
+    letter-spacing: 0.05sem;
+    line-height: 1.5em; }
+  .timeline-right .first-p {
+    text-indent: 0; }
+  .timeline-right .first-letter {
+    color: #fff;
+    font-size: 3.5em;
+    padding: 0.1em 0.3em;
+    margin: -0.1em 0.2em 0 0;
+    background: #ee8691;
+    float: left;
+    border: 1px dotted #fff;
+    border-radius: 10px 5px; }
+  .timeline-right .caps {
+    text-transform: uppercase; }
+  @media only screen and (max-width: 1100px) {
+    .timeline-right {
+      width: 80%; } }
+  @media only screen and (max-width: 500px) {
+    .timeline-right {
+      width: 100%;
+      border: 0;
+      padding: 0; }
+      .timeline-right h5 {
+        text-align: center; } }
+
+.sidebar {
+  display: inline-block;
+  width: 25%; }
+  .sidebar #skills-grid {
+    padding: 0;
+    list-style-type: none; }
+    .sidebar #skills-grid > li {
       text-align: center;
       display: inline-block;
-      width: 20%;
-      float: left; }
-      #process-wrap ul li h3 {
-        font-weight: 400;
-        font-variant: small-caps;
-        font-size: 1em;
-        letter-spacing: 0.05em; }
-        @media only screen and (max-width: 500px) {
-          #process-wrap ul li h3 {
-            font-size: 0.55em;
-            text-rendering: optimizeLegibility; } }
-      #process-wrap ul li img {
-        width: 50%; }
+      width: 100%;
+      float: left;
+      padding: 2em 0 0; }
+      @media only screen and (max-width: 768px) {
+        .sidebar #skills-grid > li {
+          width: 33.33%; } }
       @media only screen and (max-width: 500px) {
-        #process-wrap ul li {
+        .sidebar #skills-grid > li {
           width: 50%; } }
+      .sidebar #skills-grid > li h3 {
+        margin: 0;
+        font-family: Calibri, Arial, serif;
+        font-size: 1em;
+        line-height: 1.2em;
+        font-weight: 200;
+        font-variant: small-caps; }
+      .sidebar #skills-grid > li p {
+        font-size: 0.8em; }
+      .sidebar #skills-grid > li ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 1em; }
+        .sidebar #skills-grid > li ul li {
+          font-size: 0.8em; }
+  @media only screen and (max-width: 768px) {
+    .sidebar {
+      width: 100%; } }
+
+footer {
+  margin: 0 3.5em;
+  overflow: hidden;
+  padding-bottom: 2em;
+  border-top: 4px double #dbd9d4; }
   @media only screen and (max-width: 500px) {
-    #process-wrap {
-      margin: 0 1.5em; }
-      #process-wrap h2 {
-        text-rendering: optimizeLegibility;
-        line-height: 3em;
-        font-size: 0.8em; } }
+    footer {
+      margin: 0 1em; } }
+
+#contact {
+  display: inline-block;
+  width: 48%; }
+  #contact h2 {
+    font-size: 1em;
+    font-family: Georgia, serif;
+    font-weight: 300;
+    font-variant: small-caps;
+    color: #a2a2a2;
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid #dbd9d4;
+    line-height: 2em;
+    margin-bottom: 1em; }
+  #contact h3 {
+    border-bottom: 1px solid #dbd9d4;
+    padding-bottom: 0.2em;
+    margin-bottom: 0.5em; }
+  #contact a {
+    line-height: 2em;
+    color: #000;
+    text-decoration: none;
+    font-family: Calibri, Arial, sans-serif;
+    font-weight: 300; }
+    #contact a:hover {
+      color: #ee8691; }
+  @media only screen and (max-width: 500px) {
+    #contact {
+      width: 100%; } }
+
+#connect {
+  display: inline-block;
+  float: right;
+  width: 48%; }
+  #connect h2 {
+    font-size: 1em;
+    font-family: Georgia, serif;
+    font-weight: 300;
+    font-variant: small-caps;
+    color: #a2a2a2;
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid #dbd9d4;
+    line-height: 2em;
+    margin-bottom: 1em; }
+  #connect i {
+    font-size: 2.5em;
+    color: #ee8691;
+    padding: 0 0.2em 0 0;
+    cursor: pointer; }
+    #connect i:hover {
+      opacity: 0.8; }
+  @media only screen and (max-width: 500px) {
+    #connect {
+      width: 100%; } }
 
 /*# sourceMappingURL=main.css.map */
