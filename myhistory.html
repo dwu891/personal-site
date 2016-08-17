@@ -13,13 +13,21 @@
 </head>
 
 <body>
+<ul id="mobile-nav">
+    <li><a href="/work.html">Work</a></li>
+    <li><a class="current-page" href="/myhistory.html">About</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">Resum&eacute;</a></li>
+</ul>
 <div id="page-wrapper">
     <header>
         <a href="/index.html"><img id="logo-img" src="images/logo.png"></a><h1 id="logo-name"><a href="/index.html">Daria Wu</a></h1>
+        <a id="menu-btn" href="#">Menu</a>
         <nav>
             <ul>
-                <li><a href="#">Work</a></li>
-                <li><a class="current-page" href="/myhistory">About</a></li>
+                <li><a href="/work.html">Work</a></li>
+                <li><a class="current-page" href="/myhistory.html">About</a></li>
+                <li><a href="#">Contact</a></li>
                 <li>|</li>
                 <li><a id="resume" href="#">Resum&eacute;</a></li>
             </ul>
@@ -27,66 +35,210 @@
     </header>
     <div id="about-photo">
     </div>
-   <div id="experience">
-        <div class="exp-content">
+   <div id="history">
+        <div class="h-content">
             <h2>A Brief History of Me</h2>
+            <!--<div id="table-of-contents">
+                <h3>Table of Contents</h3>
+                <a href="#t1">1. My Neopets Obsession</a>
+                <a href="#t2">2. High School Reboot</a>
+                <a href="#t3">3. Webmastering</a>
+                <a href="#t4">4. The Daily Dose</a>
+                <a href="#t5">5. Quiet in the Library</a>
+                <a href="#t6">6. Now and Forever</a>
+            </div>-->
             <div class="timeline">
-                <div class="timeline-left">
-                    <h4>2005</h4>
+                <div class="pointInTime">
+                    <span class="first-letter">A</span><p class="first-p"> <span class="caps">s a kid in the 90s when the internet</span> was just picking up speed I grew up with the web in my blood. As a kid, I fiddled with code to make my Neopets shop the prettiest and coolest of them all. And in high school I had the honor of redesigning the school's website which led to more website commissions from school clubs. Because I loved building web experiences I made the decision to study Computer Science in university so I could better understand the underworkings of programming and the web.</p>
+                    <p>In my sophomore year at university I landed a position as a technical assistant for a new research center and a webmaster position for a small chemistry club, helping both groups build and maintain a new website. In my junior year I was hired as a web developer for the Daily Bruin and the student development group BuildUCLA design to build web pages and mobile applications. All these positions helped me build team experience, taught me a lot of valuable new skills while building on the old, and allowed me to share my passion for the web by teaching others.</p>
+                    <p>After four years of late nights and tough competitions I graduated in 2015, and now I'm back home in the San Francisco Bay Area looking for more work designing and building awesome web experiences and continuing to learn more and more about the work I love so much.</p>
                 </div>
-                <div class="timeline-right">
-                    <h5>My Neopets Obsession</h5>
-                    <span class="first-letter">I</span><p class="first-p"> <span class="caps">grew up in the hey-day</span> of Neopets, an online virtual pet community where users could care for Neopets, play games, and sell items in shops to earn Neopoints. The best shops were tricked out with color, pictures, and music, and I was determined to make my shop just as great.</p>
-                    <p>To put my shop a cut above the rest I studied online tutorials and other shop layouts to get a handle on markup and styling. And in a few weeks I had memorized the basic HTML structure and syntax and was applying this to other areas of the site like profiles, messages, and guilds. But as is the case with all fads, the Neopets craze soon died down, and it took a few years before I really dove back into the world of web design.</p>
+            </div>
+            <!--<div class="timeline">
+                <div class="pointInTime">
+                    <h4 id="t2">2010</h4>
+                    <h5>High School Reboot</h5>
+                    <span class="first-letter">A</span><p class="first-p"><span class="caps">t the start of my junior year</span> in high school I was placed in Web Design for my vocational elective. Initially I was disappointed, I didn't get my first choice of Home Economics, and the class curriculum covered material I'd already learned. We spent first few weeks learning the basics of HTML and CSS, and I spent my days finishing book assignments early so I could busy myself with other work.</p>
+                    <p>The class dragged on for those first few weeks until the class was ready to tackle a more creative assignment which was to build a website outlining our career goals. Finally, I had a chance to apply my knowledge beyond the scope of our workbooks. Given about a week to complete the job I researched new techniques that I'd always thought were cool but hadn't yet attempted like horizontal navigation and div alignments. I added pictures for each of the career fields I was interested in and threw in a contact form because I wanted to see how input fields worked.</p>
+                    <p>It was the most fun I'd had in the class since it started and I was excited to have input from the teacher on my work. But instead of just giving me my grade my teacher saw that I was at a higher level than the rest of the class and offered me the opportunity to redesign the school's website for credit. I was thrilled at the prospect and the rest of my school year in the course was dedicated to revamping the school website to the best of my ability. My experience was significantly broadened on such a large scale project - I had to make use of stylesheets to reduce the amount of copy-pasting I needed to do, I dabbled into JavaScript for the first time, and really started to see how much more there was that I didn't know.</p>
                 </div>
             </div>
             <div class="timeline">
-                <div class="timeline-left">
-                    <h4>2010</h4>
-                </div>
-                <div class="timeline-right">
-                    <h5>Rebooting</h5>
-                    <span class="first-letter">H</span><p class="first-p"><span class="caps">igh  school Web Design</span> was when I truly began to expand my view of web development. I didn't sign up for Web Design specifically (my first choice was home economics and web design a placeholder second). And when I was placed in the class I thought it would be a boring semester of material I'd already taught myself years ago. And for the first few weeks that was true. I usually finished the day's exercises early and spent the rest of class doing other homework or playing a game. It wasn't until the final creative assignment of the class that I felt challenged.</p>
-                </div>
-            </div>
-            <div class="timeline">
-                <div class="timeline-left">
-                    <h4>2012</h4>
-                </div>
-                <div class="timeline-right">
+                <div class="pointInTime">
+                    <h4 id="t3">2012</h4>
                     <h5>Webmastering</h5>
                     <span class="first-letter">I</span><p><span class="caps">n high school I was placed</span> in Web Design to satisfy my school's vocational requirement (my first choice was home economics). Having already learned most of the material of the course I typically finished my assignments early and spent the rest of class doing other homework. When we got our first big creative assignment, a personal career website, I was delighted to test skills beyond the scope of the class.</p>
                 </div>
             </div>
             <div class="timeline">
-                <div class="timeline-left">
-                    <h4>2013</h4>
-                </div>
-                <div class="timeline-right">
-                    <h5>Bringing News to Life</h5>
+                <div class="pointInTime">
+                    <h4 id="t4">2013</h4>
+                    <h5>The Daily Dose</h5>
                     <span class="first-letter">I</span><p><span class="caps">n high school I was placed</span> in Web Design to satisfy my school's vocational requirement (my first choice was home economics). Having already learned most of the material of the course I typically finished my assignments early and spent the rest of class doing other homework. When we got our first big creative assignment, a personal career website, I was delighted to test skills beyond the scope of the class.</p>
                 </div>
             </div>
             <div class="timeline">
-                <div class="timeline-left">
-                    <h4>2014</h4>
-                </div>
-                <div class="timeline-right">
-                    <h5>Libraries</h5>
+                <div class="pointInTime">
+                    <h4 id="t5">2014</h4>
+                    <h5>Quiet in the Library</h5>
                     <span class="first-letter">I</span><p><span class="caps">n high school I was placed</span> in Web Design to satisfy my school's vocational requirement (my first choice was home economics). Having already learned most of the material of the course I typically finished my assignments early and spent the rest of class doing other homework. When we got our first big creative assignment, a personal career website, I was delighted to test skills beyond the scope of the class.</p>
                 </div>
             </div>
             <div class="timeline">
-                <div class="timeline-left">
-                    <h4>Today</h4>
-                </div>
-                <div class="timeline-right">
-                    <h5>Libraries</h5>
+                <div class="pointInTime">
+                    <h4 id="t6">Today</h4>
+                    <h5>Now and Forever</h5>
                     <span class="first-letter">I</span><p><span class="caps">n high school I was placed</span> in Web Design to satisfy my school's vocational requirement (my first choice was home economics). Having already learned most of the material of the course I typically finished my assignments early and spent the rest of class doing other homework. When we got our first big creative assignment, a personal career website, I was delighted to test skills beyond the scope of the class.</p>
                 </div>
-            </div>
+            </div>-->
         </div>
     </div>
+    <section class="skills-list">
+        <h2>My Skill History</h2>
+        <div class="skill-level visible">
+            <ul>
+                <li>expert<br><small>5 or more years</small></li>
+                <li>advanced<br><small>3 to 4 years</small></li>
+                <li>intermediate<br><small>1 to 2 years</small></li>
+                <li>beginner<br><small>Less than 1 year</small></li>
+            </ul>
+        </div>
+        <figure>
+            <div class="skill-level hidden">
+                <ul>
+                    <li>expert<br><small>5 or more years</small></li>
+                    <li>advanced<br><small>3 to 4 years</small></li>
+                    <li>intermediate<br><small>1 to 2 years</small></li>
+                    <li>beginner<br><small>Less than 1 year</small></li>
+                </ul>
+            </div>
+            <div class="frontend">
+                <p>Front-End</p>
+                <div class="data">
+                    <div class="advanced no-offset" title="Organization, links, media"></div>
+                    <div class="graph-header"></div>
+                    <label class>HTML5</label>
+                </div>
+                <div class="data">
+                    <div class="advanced offset">
+                        <div class="extend-icon">|</div>
+                    </div>
+                    <label class>CSS3</label>
+                </div>
+                <div class="data">
+                    <div class="intermediate no-offset"></div>
+                    <label class>JavaScript</label>
+                </div>
+                <div class="data">
+                    <div class="intermediate offset">
+                        <div class="extend-icon">|</div>
+                    </div>
+                    <label class>JQuery</label>
+                </div>
+                <div class="data">
+                    <div class="beginner no-offset" title="Format, variables, mixins, placeholders, and media queries."></div>
+                    <label class>Sass</label>
+                </div>
+            </div>
+            <div class="skill-level hidden">
+                <ul>
+                    <li>expert<br><small>5 or more years</small></li>
+                    <li>advanced<br><small>3 to 4 years</small></li>
+                    <li>intermediate<br><small>1 to 2 years</small></li>
+                    <li>beginner<br><small>Less than 1 year</small></li>
+                </ul>
+            </div>
+            <div class="backend">
+                <p>Back-End</p>
+                <div class="data">
+                    <div class="intermediate offset">
+                        <div class="extend-icon">|</div>
+                    </div>
+                    <div class="graph-header"></div>
+                    <label class>PHP</label>
+                </div>
+                <div class="data">
+                    <div class="intermediate no-offset"></div>
+                    <label class>SQL</label>
+                </div>
+            </div>
+            <div class="skill-level hidden">
+                <ul>
+                    <li>expert<br><small>5 or more years</small></li>
+                    <li>advanced<br><small>3 to 4 years</small></li>
+                    <li>intermediate<br><small>1 to 2 years</small></li>
+                    <li>beginner<br><small>Less than 1 year</small></li>
+                </ul>
+            </div>
+            <div class="programming">
+                <p>Programming</p>
+                <div class="data">
+                    <div class="advanced offset">
+                        <div class="extend-icon">|</div>
+                    </div>
+                    <div class="graph-header"></div>
+                    <label class>C++</label>
+                </div>
+                <div class="data">
+                    <div class="intermediate no-offset"></div>
+                    <label class>Java</label>
+                </div>
+            </div>
+            <div class="skill-level hidden">
+                <ul>
+                    <li>expert<br><small>5 or more years</small></li>
+                    <li>advanced<br><small>3 to 4 years</small></li>
+                    <li>intermediate<br><small>1 to 2 years</small></li>
+                    <li>beginner<br><small>Less than 1 year</small></li>
+                </ul>
+            </div>
+            <div class="adobe">
+                <p>Adobe</p>
+                <div class="data">
+                    <div class="beginner offset">
+                        <div class="extend-icon">|</div>
+                    </div>
+                    <div class="graph-header"></div>
+                    <label class>Photoshop</label>
+                </div>
+                <div class="data">
+                    <div class="beginner no-offset"></div>
+                    <label class>Illustrator</label>
+                </div>
+            </div>
+            <div class="skill-level hidden">
+                <ul>
+                    <li>expert<br><small>5 or more years</small></li>
+                    <li>advanced<br><small>3 to 4 years</small></li>
+                    <li>intermediate<br><small>1 to 2 years</small></li>
+                    <li>beginner<br><small>Less than 1 year</small></li>
+                </ul>
+            </div>
+            <div class="other">
+                <p>Other</p>
+                <div class="data">
+                    <div class="intermediate offset">
+                        <div class="extend-icon">|</div>
+                    </div>
+                    <div class="graph-header"></div>
+                    <label class>Responsive Development</label>
+                </div>
+                <div class="data">
+                    <div class="intermediate no-offset"></div>
+                    <label class>Linux</label>
+                </div>
+                <div class="data">
+                    <div class="intermediate offset">
+                        <div class="extend-icon">|</div>
+                    </div>
+                    <label class>Git</label>
+                </div>
+            </div>
+        </figure>
+    </section>
 </div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>    
+<script src="js/main.js"></script>
 </body>
 </html>

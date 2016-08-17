@@ -13,14 +13,22 @@
 </head>
 
 <body>
-
+<ul id="mobile-nav">
+    <li><a href="/work.html">Work</a></li>
+    <li><a href="/myhistory.html">About</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a href="#">Resum&eacute;</a></li>
+</ul>
 <div id="page-wrapper">
     <header>
-        <a href="#"><img id="logo-img" src="images/logo.png"></a><h1 id="logo-name"><a href="#">Daria Wu</a></h1>
+        <a href="/index.html"><img id="logo-img" src="images/logo.png"></a>
+        <h1 id="logo-name"><a href="/index.html">Daria Wu</a></h1>
+        <a id="menu-btn" href="#">Menu</a>
         <nav>
             <ul>
-                <li><a href="#">Work</a></li>
+                <li><a href="/work.html">Work</a></li>
                 <li><a href="/myhistory.html">About</a></li>
+                <li><a href="#">Contact</a></li>
                 <li>|</li>
                 <li><a id="resume" href="#">Resum&eacute;</a></li>
             </ul>
@@ -33,7 +41,7 @@
             </p>
             <h2>About This Site</h2>
             <p class="intro-sub">
-                I've been teaching myself the ins and outs of web design and development since I was 12. Redesigning and rebuilding my personal website is one of the ways I keep my HTML, CSS, and JavaScript skills sharp, and how I test the waters with new techniques. I believe personal websites are valuable learning tools for new designers and developers, and one of my goals is to make an inspirational website for other aspiring web professionals. My website is built from scratch in the <a href="#">Brackets</a> text editor. Resources used include <a href="#">Font Awesome</a> icons, the <a href="#">Ikooni Outline icon set</a> by Laura Reen, photographs by <a href="#">Ornella Binni</a> and <a href="#">Brigitte Tohm</a>, and the free font <a href="#">Henry Morgan Hand</a> by Manfred Klein.
+                I've been teaching myself the ins and outs of web design and development since I was 12. Redesigning and rebuilding my personal website is one of the ways I keep my HTML, CSS, and JavaScript skills sharp, and how I test the waters with new techniques. I believe personal websites are valuable learning tools for new designers and developers, and one of my goals is to make an inspirational website for other aspiring web professionals. My website is built from scratch in the <a href="#">Brackets</a> text editor. Resources used include <a href="#">Font Awesome</a> icons, photographs by <a href="#">Ornella Binni</a> and <a href="#">Brigitte Tohm</a>, and the free font <a href="#">Henry Morgan Hand</a> by Manfred Klein.
             </p>
         </div>
         <div class="intro-img">
@@ -45,48 +53,45 @@
             <h2>Selected Works</h2>
             <ul>
                 <li>
-                    <small>Selected</small><h3>Design</h3>
-                    <div class="select-img design"></div>
+                    <small>Selected from</small>
+                    <h3>Design</h3>
+                    <a href="#">
+                        <div class="select-img design"></div>
+                    </a>
                 </li>
                 <li>
-                    <small>Selected</small><h3>Responsive</h3>
-                    <div class="select-img responsive"></div>
+                    <small>Selected from</small>
+                    <h3>Web</h3>
+                    <a href="#">
+                        <div class="select-img responsive"></div>
+                    </a>
                 </li>
                 <li>
-                    <small>Selected</small><h3>WYSIWG</h3>
-                    <div class="select-img wysiwyg"></div>
+                    <small>Selected from</small>
+                    <h3>Graphic</h3>
+                    <a href="#">
+                        <div class="select-img graphic"></div>
+                    </a>
                 </li>
             </ul>
         </div>
         <div id="books-wrap">
             <h2>Selected Books</h2>
             
-            <h3>The Design of Everyday Things</h3>
+            <a href="#"><h3>The Design of Everyday Things</h3></a>
             <small>by Don Norman</small>
-            <h3>Don't Make Me Think</h3>
+            <a href="#"><h3>Don't Make Me Think</h3></a>
             <small>by Steve Krug</small>
-            <h3>A Book Apart, Responsive Web Design</h3>
+            <a href="#"><h3>A Book Apart, Responsive Web Design</h3></a>
             <small>by Ethan Marcotte</small>
-            <h3>JavaScript &amp; Jquery</h3>
+            <a href="#"><h3>JavaScript &amp; Jquery</h3></a>
             <small>by Jon Duckett</small>
         </div>
     </div>
-
-    <footer>
-        <div id="contact">
-            <h2>Get in Touch</h2>
-            <a href="#">Contact Me</a>
-        </div>
-        <div id="connect">
-            <h2>Connect With Me</h2>
-            <i class="fa fa-facebook-square" aria-hidden="true"></i>
-            <i class="fa fa-snapchat" aria-hidden="true"></i>
-            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-            <i class="fa fa-github-square" aria-hidden="true"></i>    
-        </div>
-    </footer>
 </div>
     
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>    
+<script src="js/main.js"></script>    
 </body>
 
 </html>

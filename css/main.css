@@ -5,10 +5,40 @@ body {
 .current-page {
   color: #ee8691; }
 
+nav {
+  margin: 0 auto;
+  padding: 0; }
+
+#mobile-nav {
+  display: none;
+  margin: 0;
+  text-align: center;
+  padding: 0;
+  overflow: hidden;
+  list-style-type: none; }
+  #mobile-nav li {
+    display: block;
+    border-top: 1px solid #f9f9f9; }
+    #mobile-nav li:first-child {
+      border-top: 0; }
+    #mobile-nav li .current-page {
+      color: #ee8691; }
+    #mobile-nav li a {
+      color: #000;
+      text-decoration: none;
+      font-family: Calibri, Arial, sans-serif;
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      font-size: 1.5em;
+      line-height: 2em;
+      font-variant: small-caps; }
+      #mobile-nav li a:hover {
+        color: #ee8691; }
+
 #page-wrapper {
   margin: 0 2em;
   padding: 0 3em 2em;
-  min-height: 400px;
+  min-height: 100vh;
   background: #fff;
   box-shadow: 0 0 5px #a2a2a2;
   -moz-box-shadow: 0 0 5px #a2a2a2;
@@ -27,7 +57,7 @@ header {
   max-width: 1000px; }
   @media only screen and (max-width: 768px) {
     header {
-      padding: 0 1.5em 1em; } }
+      padding: 0 1em 3em; } }
 
 #logo-img {
   float: left;
@@ -37,10 +67,9 @@ header {
   transition: 0.3s opacity ease-in-out; }
   #logo-img:hover {
     opacity: 0.7; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 600px) {
     #logo-img {
-      width: 23px;
-      padding-right: 0.3em; } }
+      width: 30px; } }
 
 #logo-name {
   font-family: HenryMorganHand, Georgia, serif;
@@ -52,9 +81,22 @@ header {
     transition: 0.3s color ease-in-out; }
     #logo-name a:hover {
       color: #ee8691; }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 600px) {
     #logo-name {
-      font-size: 1.5em; } }
+      display: none; } }
+
+#menu-btn {
+  display: none;
+  right: 1.5em;
+  top: 2px;
+  position: absolute;
+  color: #000;
+  font-family: Calibri, Arial, sans-serif;
+  text-decoration: none;
+  font-weight: 300; }
+  @media only screen and (max-width: 600px) {
+    #menu-btn {
+      display: inline-block; } }
 
 nav ul {
   list-style-type: none;
@@ -73,7 +115,7 @@ nav ul {
       text-decoration: none; }
       nav ul li a:hover {
         color: palevioletred; }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 600px) {
     nav ul {
       display: none; } }
 
@@ -102,10 +144,9 @@ nav ul {
     padding: 0;
     font-size: 0.5em;
     font-family: Georgia, serif;
-    font-weight: 300;
+    font-weight: 400;
     font-variant: small-caps;
     letter-spacing: 0.1em;
-    color: darkgray;
     border-bottom: 1px solid #dbd9d4; }
   @media only screen and (max-width: 1200px) {
     .intro-text {
@@ -122,12 +163,12 @@ nav ul {
         font-size: 0.7em; } }
 
 .intro {
-  margin: 0 0 0.5em 0;
+  margin: 0 0 0.4em 0;
   padding-bottom: 1em;
   border-bottom: 4px double #dbd9d4; }
 
 .intro-sub {
-  font-size: 0.35em;
+  font-size: 0.4em;
   font-family: Georgia;
   line-height: 1.5;
   column-count: 2;
@@ -152,7 +193,7 @@ nav ul {
 .intro-img {
   float: right;
   width: 33%;
-  height: 450px;
+  height: 500px;
   background: url("../images/intro-photo.jpg");
   background-position: bottom;
   background-size: cover; }
@@ -169,7 +210,7 @@ nav ul {
 #select-wrap {
   margin: 0 3.5em;
   overflow: hidden; }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 768px) {
     #select-wrap {
       margin: 0 1.5em; } }
 
@@ -179,7 +220,6 @@ nav ul {
   padding-bottom: 2em; }
   #books-wrap h2 {
     margin: 0;
-    color: darkgray;
     font-family: Georgia, serif;
     font-variant: small-caps;
     font-weight: 300;
@@ -187,24 +227,28 @@ nav ul {
     font-size: 1.075em;
     border-bottom: 1px solid #dbd9d4;
     line-height: 2.5em; }
+  #books-wrap a {
+    color: #000;
+    text-decoration: none; }
+    #books-wrap a:hover {
+      color: #ee8691; }
   #books-wrap h3 {
     font-family: Calibri, Arial, sans-serif;
     font-weight: 300;
     font-size: 1em;
-    margin: 2em 0 0; }
+    margin: 1.5em 0 0; }
   #books-wrap small {
     font-family: Georgia, serif;
     font-style: italic;
     font-size: 0.7em; }
-  @media only screen and (max-width: 768px) {
-    #books-wrap h2 {
-      text-rendering: optimizeLegibility;
-      line-height: 3em;
-      font-size: 0.8em; } }
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 600px) {
     #books-wrap {
       width: 100%;
-      float: none; } }
+      float: none; }
+      #books-wrap h2 {
+        text-rendering: optimizeLegibility;
+        line-height: 3em;
+        font-size: 0.8em; } }
 
 #work-wrap {
   width: 68%;
@@ -212,7 +256,6 @@ nav ul {
   overflow: hidden; }
   #work-wrap h2 {
     margin: 0;
-    color: darkgray;
     font-family: Georgia, serif;
     font-variant: small-caps;
     font-weight: 300;
@@ -233,26 +276,30 @@ nav ul {
         font-family: Georgia, serif;
         font-size: 0.7em; }
       #work-wrap ul li h3 {
-        margin: 0;
+        padding-bottom: 0.2em;
+        line-height: 1.5em;
+        margin: 0 0 1em;
+        font-size: 1em;
         font-family: Georgia, serif;
         font-variant: small-caps;
-        font-weight: 300; }
+        font-weight: 300;
+        letter-spacing: 0.1em; }
       #work-wrap ul li .select-img {
         margin-top: 0.5em;
-        width: 80%;
-        height: 175px; }
+        width: 90%;
+        height: 28vh; }
+        #work-wrap ul li .select-img:hover {
+          opacity: 0.7; }
       #work-wrap ul li .design {
-        background: url("../images/stashd.png") no-repeat top left;
+        background: url("../images/stashd.png") no-repeat center;
         background-size: cover; }
       #work-wrap ul li .responsive {
-        background: url("../images/db-features.png") no-repeat top center;
-        background-size: cover;
-        border: 1px solid #dbd9d4; }
-      #work-wrap ul li .wysiwyg {
-        background: url("../images/smacs.jpg") no-repeat top left;
-        background-size: cover;
-        border: 1px solid #dbd9d4; }
-  @media only screen and (max-width: 500px) {
+        background: url("../images/db-features.jpg") no-repeat top;
+        background-size: cover; }
+      #work-wrap ul li .graphic {
+        background: url("../images/cartoon-face-1.jpg") no-repeat center center;
+        background-size: cover; }
+  @media only screen and (max-width: 600px) {
     #work-wrap {
       width: 100%;
       float: none; }
@@ -260,142 +307,126 @@ nav ul {
         font-size: 0.8em; }
       #work-wrap ul li {
         width: 50%;
-        padding: 0 0 1em; }
+        padding: 0 0 1em;
+        text-align: center; }
+        #work-wrap ul li h3 {
+          font-size: 0.8em;
+          margin: 0;
+          padding: 0; }
         #work-wrap ul li .select-img {
-          width: 95%;
-          height: 90px; } }
+          margin: 0.5em auto;
+          width: 98%;
+          height: 20vh; } }
 
 #about-photo {
   margin: 0 3.5em;
-  height: 275px;
+  height: 300px;
   background: url("../images/about-photo.jpg");
   background-size: cover;
   background-position: center; }
+  @media only screen and (max-width: 768px) {
+    #about-photo {
+      margin: 0 1.5em;
+      height: 150px; } }
 
-#experience {
+#history {
   border-top: 4px double #dbd9d4;
+  padding-top: 0.8em;
   margin: 1.5em 3.5em 0; }
-  #experience h2 {
+  #history h2 {
     margin: 0;
     padding: 0;
     font-weight: 300;
     font-variant: small-caps;
     font-size: 1.2em;
     letter-spacing: 0.1em;
-    color: darkgray;
     border-bottom: 1px solid #dbd9d4;
     line-height: 2.3em; }
   @media only screen and (max-width: 768px) {
-    #experience {
+    #history {
       margin: 0.5em 1.5em; }
-      #experience h2 {
+      #history h2 {
         font-size: 0.9em; } }
 
-.exp-content {
-  display: inline-block; }
-  @media only screen and (max-width: 1100px) {
-    .exp-content {
-      width: 71%; } }
-  @media only screen and (max-width: 768px) {
-    .exp-content {
-      display: block;
-      width: 100%;
-      margin: 0; } }
+.h-content {
+  display: block;
+  margin: 0; }
+
+#table-of-contents.anchor {
+  position: fixed;
+  top: 0; }
+
+#table-of-contents {
+  width: 22%;
+  float: left; }
+  #table-of-contents h3 {
+    font-family: HenryMorganHand, Georgia, serif;
+    color: #ee8691;
+    font-size: 2em;
+    margin: 1em 0 0;
+    letter-spacing: 0.05em; }
+  #table-of-contents a {
+    font-family: Calibri, Arial, sans-serif;
+    font-weight: 300;
+    text-decoration: none;
+    display: block;
+    line-height: 2.5em;
+    color: #000; }
+    #table-of-contents a:hover {
+      color: #ee8691; }
+  @media only screen and (max-width: 900px) {
+    #table-of-contents {
+      display: none; } }
 
 .timeline {
-  margin: 1em 0; }
+  margin: 3em auto;
+  width: 100%; }
+  @media only screen and (max-width: 900px) {
+    .timeline {
+      width: 100%; } }
 
-.timeline-left {
-  width: 100%;
+.pointInTime {
+  margin: 0 5%;
   display: block;
-  float: left;
-  text-align: right; }
-  .timeline-left h4 {
+  padding: 0.2em 0 0.5em 0; }
+  .pointInTime h4 {
     text-align: center;
     font-weight: 300;
     font-size: 1em;
     font-style: italic; }
-  @media only screen and (max-width: 500px) {
-    .timeline-left {
-      width: 100%; } }
-
-.timeline-right {
-  margin: 0 auto;
-  width: 70%;
-  display: block;
-  padding: 0.2em 0 0.5em 0; }
-  .timeline-right h5 {
+  .pointInTime h5 {
     text-align: center;
     line-height: 0.8em;
     font-size: 2em;
     margin: 0.5em 0 0.5em;
     font-family: HenryMorganHand, Georgia, serif; }
-  .timeline-right p {
+  .pointInTime p {
     text-indent: 1.5em;
     margin: 0;
     font-size: 1.1em;
     letter-spacing: 0.05sem;
     line-height: 1.5em; }
-  .timeline-right .first-p {
+  .pointInTime .first-p {
     text-indent: 0; }
-  .timeline-right .first-letter {
+  .pointInTime .first-letter {
     color: #fff;
     font-size: 3.5em;
     padding: 0.1em 0.3em;
     margin: -0.1em 0.2em 0 0;
     background: #ee8691;
-    float: left;
-    border: 1px dotted #fff;
-    border-radius: 10px 5px; }
-  .timeline-right .caps {
-    text-transform: uppercase; }
-  @media only screen and (max-width: 1100px) {
-    .timeline-right {
-      width: 80%; } }
+    float: left; }
+  .pointInTime .caps {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.8em; }
   @media only screen and (max-width: 500px) {
-    .timeline-right {
+    .pointInTime {
+      margin: 0;
       width: 100%;
       border: 0;
-      padding: 0; }
-      .timeline-right h5 {
+      padding: 1em 0; }
+      .pointInTime h5 {
         text-align: center; } }
-
-.sidebar {
-  display: inline-block;
-  width: 25%; }
-  .sidebar #skills-grid {
-    padding: 0;
-    list-style-type: none; }
-    .sidebar #skills-grid > li {
-      text-align: center;
-      display: inline-block;
-      width: 100%;
-      float: left;
-      padding: 2em 0 0; }
-      @media only screen and (max-width: 768px) {
-        .sidebar #skills-grid > li {
-          width: 33.33%; } }
-      @media only screen and (max-width: 500px) {
-        .sidebar #skills-grid > li {
-          width: 50%; } }
-      .sidebar #skills-grid > li h3 {
-        margin: 0;
-        font-family: Calibri, Arial, serif;
-        font-size: 1em;
-        line-height: 1.2em;
-        font-weight: 200;
-        font-variant: small-caps; }
-      .sidebar #skills-grid > li p {
-        font-size: 0.8em; }
-      .sidebar #skills-grid > li ul {
-        list-style-type: none;
-        padding: 0;
-        margin-top: 1em; }
-        .sidebar #skills-grid > li ul li {
-          font-size: 0.8em; }
-  @media only screen and (max-width: 768px) {
-    .sidebar {
-      width: 100%; } }
 
 footer {
   margin: 0 3.5em;
@@ -459,5 +490,322 @@ footer {
   @media only screen and (max-width: 500px) {
     #connect {
       width: 100%; } }
+
+.skills-list {
+  margin: 0 3.5em;
+  padding: 0 0 2em 0;
+  overflow: auto;
+  border-top: 4px double #dbd9d4; }
+  .skills-list h2 {
+    font-family: Georgia, serif;
+    font-variant: small-caps;
+    font-weight: 300;
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+    border-bottom: 1px solid #dbd9d4;
+    line-height: 2em; }
+  .skills-list p {
+    font-family: Calibri, Arial, sans-serif;
+    font-style: normal;
+    position: absolute;
+    top: 186px;
+    left: 0px;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    z-index: 200; }
+  @media only screen and (max-width: 500px) {
+    .skills-list {
+      margin: 0 1.5em; } }
+
+.graph-header {
+  position: absolute;
+  top: 190px;
+  height: 2.5em;
+  left: 0px;
+  right: 0px; }
+
+/*------------------
+ Skill Level Scale
+------------------*/
+.skill-level {
+  width: 15%;
+  margin: 0;
+  padding: 0; }
+  .skill-level ul {
+    padding: 0px;
+    margin: 25px 0 0 0;
+    float: left;
+    width: 100%; }
+    .skill-level ul li {
+      color: #ee8691;
+      list-style-type: none;
+      text-align: right;
+      height: 50px;
+      margin: 0 10px 0 0;
+      padding-right: 10px;
+      font-style: italic;
+      background: url("../images/vertical-bar.png") no-repeat 100% 0; }
+      .skill-level ul li small {
+        font-weight: 300;
+        font-style: italic;
+        color: #606060;
+        font-family: Calibri, Arial, sans-serif; }
+        @media only screen and (max-width: 900px) {
+          .skill-level ul li small {
+            visibility: hidden; } }
+  @media only screen and (max-width: 900px) {
+    .skill-level {
+      font-size: 12px;
+      width: 28%; } }
+
+.expert {
+  width: 20px;
+  margin: 0 auto;
+  text-align: center;
+  background: url("../images/graph_sprite.png") 0px 0px no-repeat; }
+  .expert:hover {
+    background: url("../images/graph_sprite.png") -21px 0px no-repeat;
+    cursor: pointer; }
+
+.advanced {
+  width: 20px;
+  margin: 0 auto;
+  text-align: center;
+  background: url("../images/graph_sprite.png") -49px 0px no-repeat; }
+  .advanced:hover {
+    background: url("../images/graph_sprite.png") -70px 0px no-repeat;
+    cursor: pointer; }
+
+.intermediate {
+  width: 20px;
+  margin: 0 auto;
+  text-align: center;
+  background: url("../images/graph_sprite.png") -98px 0px no-repeat; }
+  .intermediate:hover {
+    background: url("../images/graph_sprite.png") -119px 0px no-repeat;
+    cursor: pointer; }
+
+.beginner {
+  width: 20px;
+  margin: 0 auto;
+  text-align: center;
+  background: url("../images/graph_sprite.png") -147px 0px no-repeat; }
+  .beginner:hover {
+    background: url("../images/graph_sprite.png") -168px 0px no-repeat;
+    cursor: pointer; }
+
+@media only screen and (max-width: 900px) {
+  .visible {
+    display: none; } }
+
+.hidden {
+  display: none; }
+  @media only screen and (max-width: 900px) {
+    .hidden {
+      display: block; } }
+
+/*------------------
+ Graph Bar Styles
+------------------*/
+figure {
+  margin: 0; }
+
+.no-offset {
+  height: 225px; }
+
+.offset {
+  height: 250px;
+  position: relative; }
+  .offset .extend-icon {
+    position: absolute;
+    bottom: 8px;
+    left: 7px; }
+
+/*------------------------------------------------------------------------------
+ Skill Sections
+ + width for each section differs depending on number of bars in the section
+ + graph-header colors differ to distinguish between sections
+ + when viewing on mobile all sections have same width
+-------------------------------------------------------------------------------*/
+.frontend {
+  width: 27%;
+  display: table;
+  height: 175px;
+  float: left;
+  margin-top: 25px;
+  font-size: 11px;
+  position: relative;
+  text-align: center;
+  font-style: italic; }
+  .frontend .data {
+    display: table-cell;
+    vertical-align: top;
+    width: 20%; }
+  .frontend .graph-header {
+    background: #e85968;
+    border-radius: 5px 0 0 5px; }
+  @media only screen and (max-width: 900px) {
+    .frontend {
+      width: 60%; }
+      .frontend .graph-header {
+        border-radius: 0; } }
+
+.backend {
+  width: 10%;
+  display: table;
+  height: 175px;
+  float: left;
+  margin-top: 25px;
+  font-size: 11px;
+  position: relative;
+  text-align: center;
+  font-style: italic; }
+  .backend .data {
+    display: table-cell;
+    vertical-align: top;
+    width: 50%; }
+  .backend .graph-header {
+    background: #eb707d; }
+  @media only screen and (max-width: 900px) {
+    .backend {
+      width: 60%; } }
+
+.programming {
+  width: 14%;
+  display: table;
+  height: 175px;
+  float: left;
+  margin-top: 25px;
+  font-size: 11px;
+  position: relative;
+  text-align: center;
+  font-style: italic; }
+  .programming .data {
+    display: table-cell;
+    vertical-align: top;
+    width: 50%; }
+  .programming .graph-header {
+    background: #ee8691; }
+  @media only screen and (max-width: 900px) {
+    .programming {
+      width: 60%; } }
+
+.adobe {
+  width: 10%;
+  display: table;
+  height: 175px;
+  float: left;
+  margin-top: 25px;
+  font-size: 11px;
+  position: relative;
+  text-align: center;
+  font-style: italic; }
+  .adobe .data {
+    display: table-cell;
+    vertical-align: top;
+    width: 50%; }
+  .adobe .graph-header {
+    background: #f19ca5; }
+  @media only screen and (max-width: 900px) {
+    .adobe {
+      width: 60%; } }
+
+.other {
+  width: 18%;
+  display: table;
+  height: 175px;
+  float: left;
+  margin-top: 25px;
+  font-size: 11px;
+  position: relative;
+  text-align: center;
+  font-style: italic; }
+  .other .data {
+    display: table-cell;
+    vertical-align: top;
+    width: 33.33333%; }
+  .other .graph-header {
+    background: #f4b3ba;
+    border-radius: 0 5px 5px 0; }
+  @media only screen and (max-width: 900px) {
+    .other {
+      width: 60%; }
+      .other .graph-header {
+        border-radius: 0; } }
+
+.data:hover label {
+  color: #ccc; }
+
+label {
+  display: inline-block;
+  margin-bottom: 5px;
+  text-align: center; }
+
+#portfolio {
+  text-align: center;
+  margin: 0 3.5em; }
+  #portfolio h2 {
+    font-family: Georgia, serif;
+    font-weight: 300;
+    border-bottom: 1px solid #dbd9d4;
+    font-variant: small-caps;
+    line-height: 2em;
+    margin-left: -1.5%;
+    margin-bottom: 2em; }
+  #portfolio #p-container {
+    margin: 0 auto;
+    width: 95.5%; }
+  #portfolio ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    margin-left: -7%; }
+    #portfolio ul li {
+      display: inline-block;
+      float: left;
+      width: 15%;
+      margin-left: 5%;
+      position: relative;
+      margin-top: 0.5%; }
+      #portfolio ul li a {
+        text-decoration: none;
+        color: #000; }
+      #portfolio ul li img {
+        width: 100%; }
+        #portfolio ul li img:hover {
+          opacity: 0.7; }
+      #portfolio ul li h5 {
+        margin: 0;
+        line-height: 3em;
+        font-family: Georgia, sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-size: 0.7em; }
+  @media only screen and (max-width: 1000px) {
+    #portfolio ul li {
+      width: 20%; } }
+  @media only screen and (max-width: 768px) {
+    #portfolio ul li {
+      width: 28.33%; } }
+  @media only screen and (max-width: 500px) {
+    #portfolio {
+      margin: 0 0.5em; }
+      #portfolio h2 {
+        font-size: 1.25em;
+        margin: 0; }
+      #portfolio #p-container {
+        width: 100%; }
+      #portfolio ul {
+        margin-left: -1.5%; }
+        #portfolio ul li {
+          width: 31.83%;
+          margin-left: 1.5%; }
+          #portfolio ul li h5 {
+            display: none; } }
 
 /*# sourceMappingURL=main.css.map */

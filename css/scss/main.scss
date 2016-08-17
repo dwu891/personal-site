@@ -9,10 +9,47 @@ body {
     color: $main-color;
 }
 
+nav {
+    margin: 0 auto;
+    padding: 0;
+}
+
+#mobile-nav {
+    display: none;
+    margin: 0;
+    text-align: center;
+    padding: 0;
+    overflow: hidden;
+    list-style-type: none;
+    li {
+        &:first-child {
+            border-top: 0;
+        }
+        display: block;
+        border-top: 1px solid #f9f9f9;
+        .current-page {
+            color: $main-color;
+        }
+        a {
+            color: #000;
+            text-decoration: none;
+            font-family: Calibri, Arial, sans-serif;
+            font-weight: 300;
+            letter-spacing: 0.1em;
+            font-size: 1.5em;
+            line-height: 2em;
+            font-variant: small-caps;
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
+}
+
 #page-wrapper {
     margin: 0 2em;
     padding: 0 3em 2em;;
-    min-height: 400px;
+    min-height: 100vh;
     background: #fff;
     box-shadow: 0 0 5px #a2a2a2;
     -moz-box-shadow: 0 0 5px #a2a2a2;
@@ -31,7 +68,7 @@ header {
     position: relative;
     max-width: 1000px;
     @media only screen and (max-width: 768px) {
-        padding: 0 1.5em 1em;
+        padding: 0 1em 3em;
     }
 }
 
@@ -44,9 +81,8 @@ header {
     &:hover {
         opacity: 0.7;
     }
-    @media only screen and (max-width: 768px) {
-        width: 23px;
-        padding-right: 0.3em;
+    @media only screen and (max-width: 600px) {
+        width: 30px;
     }   
 }
 
@@ -62,8 +98,22 @@ header {
             color: $main-color;
         }
     }
-    @media only screen and (max-width: 768px) {
-        font-size: 1.5em;
+    @media only screen and (max-width: 600px) {
+        display: none;
+    }
+}
+
+#menu-btn {
+    display: none;
+    right: 1.5em;
+    top: 2px;
+    position: absolute;
+    color: #000;
+    font-family: Calibri, Arial, sans-serif;
+    text-decoration: none;
+    font-weight: 300;
+    @media only screen and (max-width: 600px) {
+        display: inline-block;
     }
 }
 
@@ -87,7 +137,7 @@ nav ul {
             }
         }
     }
-    @media only screen and (max-width: 500px) {
+    @media only screen and (max-width: 600px) {
         display: none;
     }
 }
@@ -119,10 +169,9 @@ nav ul {
         padding: 0;
         font-size: 0.5em;
         font-family: Georgia, serif;
-        font-weight: 300;
+        font-weight: 400;
         font-variant: small-caps;
         letter-spacing: 0.1em;
-        color: darkgray;
         border-bottom: 1px solid #dbd9d4;
     }
     @media only screen and (max-width: 1200px) {
@@ -142,13 +191,13 @@ nav ul {
 }
 
 .intro {
-    margin: 0 0 0.5em 0;
+    margin: 0 0 0.4em 0;
     padding-bottom: 1em;
     border-bottom: 4px double #dbd9d4;
 }
 
 .intro-sub {
-    font-size: 0.35em;
+    font-size: 0.4em;
     font-family: Georgia;
     line-height: 1.5;
     column-count: 2;
@@ -176,7 +225,7 @@ nav ul {
 .intro-img {
     float: right;
     width: 33%;
-    height: 450px;
+    height: 500px;
     background: url("../images/intro-photo.jpg");
     background-position: bottom;
     background-size: cover;
@@ -194,7 +243,7 @@ nav ul {
 #select-wrap {
     margin: 0 3.5em;
     overflow: hidden;
-    @media only screen and (max-width: 500px) {
+    @media only screen and (max-width: 768px) {
         margin: 0 1.5em;
     }
 }
@@ -205,7 +254,6 @@ nav ul {
     padding-bottom: 2em;
     h2 {
         margin: 0;
-        color: darkgray;
         font-family: Georgia, serif;
         font-variant: small-caps;
         font-weight: 300;
@@ -214,27 +262,32 @@ nav ul {
         border-bottom: 1px solid #dbd9d4;
         line-height: 2.5em;
     }
+    a {
+        color: #000;
+        text-decoration: none;
+        &:hover {
+            color: $main-color;
+        }
+    }
     h3 {
         font-family: Calibri, Arial, sans-serif;
         font-weight: 300;
         font-size: 1em;
-        margin: 2em 0 0;
+        margin: 1.5em 0 0;
     }
     small {
         font-family: Georgia, serif;
         font-style: italic;
         font-size: 0.7em;
     }
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 600px) {
+        width: 100%;
+        float: none;
         h2 {
             text-rendering: optimizeLegibility;
             line-height: 3em;
             font-size: 0.8em;
         }
-    }
-    @media only screen and (max-width: 500px) {
-        width: 100%;
-        float: none;
     }
 }
 
@@ -244,7 +297,6 @@ nav ul {
     overflow: hidden;
     h2 {
         margin: 0;
-        color: darkgray;
         font-family: Georgia, serif;
         font-variant: small-caps;
         font-weight: 300;
@@ -267,33 +319,38 @@ nav ul {
                 font-size: 0.7em;
             }
             h3 {
-                margin: 0;
+                padding-bottom: 0.2em;
+                line-height: 1.5em;
+                margin: 0 0 1em;
+                font-size: 1em;
                 font-family: Georgia, serif;
                 font-variant: small-caps;
                 font-weight: 300;
+                letter-spacing: 0.1em;
             }
             .select-img {
                 margin-top: 0.5em;
-                width: 80%;
-                height: 175px;
+                width: 90%;
+                height: 28vh;
+                &:hover {
+                    opacity: 0.7;
+                }
             }
             .design {
-                background: url("../images/stashd.png") no-repeat top left;
+                background: url("../images/stashd.png") no-repeat center;
                 background-size: cover;
             }
             .responsive {
-                background: url("../images/db-features.png") no-repeat top center;
+                background: url("../images/db-features.jpg") no-repeat top;
                 background-size: cover;
-                border: 1px solid #dbd9d4;
             }
-            .wysiwyg {
-                background: url("../images/smacs.jpg") no-repeat top left;
+            .graphic {
+                background: url("../images/cartoon-face-1.jpg") no-repeat center center;
                 background-size: cover;
-                border: 1px solid #dbd9d4;
             }
         }
     }
-    @media only screen and (max-width: 500px) {
+    @media only screen and (max-width: 600px) {
         width: 100%;
         float: none;
         h3 {
@@ -302,9 +359,16 @@ nav ul {
         ul li {
             width: 50%;
             padding: 0 0 1em;
+            text-align: center;
+            h3 {
+                font-size: 0.8em;
+                margin: 0;
+                padding: 0;
+            }
             .select-img {
-                width: 95%;
-                height: 90px;
+                margin: 0.5em auto;
+                width: 98%;
+                height: 20vh;
             }
         }
     }
@@ -312,14 +376,19 @@ nav ul {
 
 #about-photo {
     margin: 0 3.5em;
-    height: 275px;
+    height: 300px;
     background: url("../images/about-photo.jpg");
     background-size: cover;
     background-position: center;
+    @media only screen and (max-width: 768px) {
+        margin: 0 1.5em;
+        height: 150px;
+    }
 }
 
-#experience {
+#history {
     border-top: 4px double #dbd9d4;
+    padding-top: 0.8em;
     margin: 1.5em 3.5em 0;
     h2 {
         margin: 0;
@@ -328,7 +397,6 @@ nav ul {
         font-variant: small-caps;
         font-size: 1.2em;
         letter-spacing: 0.1em;
-        color: darkgray;
         border-bottom: 1px solid #dbd9d4;
         line-height: 2.3em;
     }
@@ -340,45 +408,60 @@ nav ul {
     }
 }
 
-.exp-content {
-    display: inline-block;
-    @media only screen and (max-width: 1100px) {
-        width: 71%;
+.h-content {
+    display: block;
+    margin: 0;
+}
+
+#table-of-contents.anchor {
+    position: fixed;
+    top: 0;
+}
+
+#table-of-contents {
+    width: 22%;
+    float: left;
+    h3 {
+        font-family: HenryMorganHand, Georgia, serif;
+        color: $main-color;
+        font-size: 2em;
+        margin: 1em 0 0;
+        letter-spacing: 0.05em;
     }
-    @media only screen and (max-width: 768px) {
+    a {
+        font-family: Calibri, Arial, sans-serif;
+        font-weight: 300;
+        text-decoration: none;
         display: block;
-        width: 100%;
-        margin: 0;
+        line-height: 2.5em;
+        color: #000;
+        &:hover {
+            color: $main-color;
+        }
+    }
+    @media only screen and (max-width: 900px) {
+        display: none;
     }
 }
 
 .timeline {
-    margin: 1em 0;
+    margin: 3em auto;
+    width: 100%;
+    @media only screen and (max-width: 900px) {
+        width: 100%;
+    }
 }
 
-.timeline-left {
-    width: 100%;
+.pointInTime {
+    margin: 0 5%;
     display: block;
-    float: left;
-    text-align: right;
+    padding: 0.2em 0 0.5em 0;
     h4 {
         text-align: center;
         font-weight: 300;
         font-size: 1em;
         font-style: italic;
     }
-    @media only screen and (max-width: 500px) {
-        width: 100%;
-    }
-}
-
-.timeline-right {
-    margin: 0 auto;
-    width: 70%;
-    display: block;
-    //border-left: 4px double $main-color;
-    //border-radius: 20px 0 0 20px;
-    padding: 0.2em 0 0.5em 0;
     h5 {
         text-align: center;
         //border-bottom: 1px solid #dbd9d4;
@@ -406,67 +489,20 @@ nav ul {
         margin: -0.1em 0.2em 0 0;
         background: $main-color;
         float: left;
-        border: 1px dotted #fff;
-        border-radius: 10px 5px;
     }
     .caps {
         text-transform: uppercase;
-    }
-    @media only screen and (max-width: 1100px) {
-        width: 80%;
+        letter-spacing: 0.1em;
+        font-size: 0.8em;
     }
     @media only screen and (max-width: 500px) {
+        margin: 0;
         width: 100%;
         border: 0;
-        padding: 0;
+        padding: 1em 0;
         h5 {
             text-align: center;
         }
-    }
-}
-
-.sidebar {
-    display: inline-block;
-    width: 25%;
-    #skills-grid {
-        padding: 0;
-        list-style-type: none;
-        > li {
-            text-align: center;
-            display: inline-block;
-            width: 100%;
-            float: left;
-            padding: 2em 0 0;
-            @media only screen and (max-width: 768px) {
-                width: 33.33%;
-            }
-            @media only screen and (max-width: 500px) {
-                width: 50%;
-            }
-            h3 {
-                margin: 0;
-                font-family: Calibri, Arial, serif;
-                font-size: 1em;
-                line-height: 1.2em;
-                font-weight: 200;
-                //border-bottom: 1px dotted #dbd9d4;
-                font-variant: small-caps;
-            }
-            p {
-                font-size: 0.8em;
-            }
-            ul {
-                list-style-type: none;
-                padding: 0;
-                margin-top: 1em;
-                li {
-                    font-size: 0.8em;
-                }
-            }
-        }
-    }
-    @media only screen and (max-width: 768px) {
-        width: 100%;
     }
 }
 
@@ -540,5 +576,377 @@ footer {
     }
     @media only screen and (max-width: 500px) {
         width: 100%;
+    }
+}
+
+
+@mixin graph-bar {
+    width: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@mixin graph-sections {
+    display: table;
+    height: 175px;
+    float: left;
+    margin-top: 25px;
+    font-size: 11px;
+    position: relative;
+    text-align: center;
+    font-style: italic;
+}
+
+.skills-list {
+    margin: 0 3.5em;
+    padding: 0 0 2em 0;
+    overflow: auto;
+    border-top: 4px double #dbd9d4;
+    h2 {
+        font-family: Georgia, serif;
+        font-variant: small-caps;
+        font-weight: 300;
+        font-size: 1.2em;
+        letter-spacing: 0.1em;
+        border-bottom: 1px solid #dbd9d4;
+        line-height: 2em;
+    }
+    //Style for skill category titles (Front-end, Back-end, etc.)
+    p {
+        font-family: Calibri, Arial, sans-serif;
+        font-style: normal;
+        position: absolute;
+        top: 186px;
+        left: 0px;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+        font-size: 11px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        z-index: 200;
+    }
+    @media only screen and (max-width: 500px) {
+        margin: 0 1.5em;
+    }
+}
+
+//Style for category title wrappers
+.graph-header {
+    position: absolute;
+    top: 190px;
+    height: 2.5em;
+    left: 0px;
+    right: 0px;
+}
+
+
+/*------------------
+ Skill Level Scale
+------------------*/
+.skill-level {
+    width: 15%;
+    margin: 0;
+    padding: 0;
+    
+    ul {
+        padding: 0px;
+        margin: 25px 0 0 0;
+        float: left;
+        width: 100%;
+        li {
+            color: $main-color;
+            list-style-type: none;
+            text-align: right;
+            height: 50px;
+            margin: 0 10px 0 0;
+            padding-right: 10px;
+            font-style: italic;
+            background: url("../images/vertical-bar.png") no-repeat 100% 0;
+            small {
+                font-weight: 300;
+                font-style: italic;
+                color: #606060;
+                font-family: Calibri, Arial, sans-serif;
+                @media only screen and (max-width: 900px) {
+                    visibility: hidden;
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 900px) {
+        font-size: 12px;
+        width: 28%;
+    }
+}
+
+.expert {
+    @include graph-bar;
+    background: url("../images/graph_sprite.png") 0px 0px no-repeat;
+    &:hover {
+        background: url("../images/graph_sprite.png") -21px 0px no-repeat;
+        cursor: pointer;
+    }
+}
+.advanced {
+    @include graph-bar;
+    background: url("../images/graph_sprite.png") -49px 0px no-repeat;
+    &:hover {
+        background: url("../images/graph_sprite.png") -70px 0px no-repeat;
+        cursor: pointer;
+    }
+}
+.intermediate {
+    @include graph-bar;
+    background: url("../images/graph_sprite.png") -98px 0px no-repeat;
+    &:hover {
+        background: url("../images/graph_sprite.png") -119px 0px no-repeat;
+        cursor: pointer;
+    }
+}
+.beginner {
+    @include graph-bar;
+    background: url("../images/graph_sprite.png") -147px 0px no-repeat;
+    &:hover {
+        background: url("../images/graph_sprite.png") -168px 0px no-repeat;
+        cursor: pointer;
+    }
+}
+
+// Displays single skill level scale for laptop/desktop viewing
+// This scale is hidden when viewing on mobile devices
+.visible {
+    @media only screen and (max-width: 900px) {
+        display: none;
+    }    
+}
+
+// Displays skill level scale for each skill category
+// This scale is hidden when viewing on desktops or laptops
+.hidden {
+    display: none;
+    @media only screen and (max-width: 900px) {
+        display: block;
+    }
+}
+
+
+/*------------------
+ Graph Bar Styles
+------------------*/
+// Semantic tag for the bar graph
+figure {
+    margin: 0;
+}
+
+// Skill names are offset to prevent text from overlapping
+// Odd skills have no offset, even skills are offset down by 25px
+.no-offset {
+    height: 225px;
+}
+.offset {
+    height: 250px;
+    position: relative;
+    .extend-icon {
+        position: absolute;
+        bottom: 8px;
+        left: 7px;
+    }
+}
+
+
+/*------------------------------------------------------------------------------
+ Skill Sections
+ + width for each section differs depending on number of bars in the section
+ + graph-header colors differ to distinguish between sections
+ + when viewing on mobile all sections have same width
+-------------------------------------------------------------------------------*/
+.frontend {
+    width: 27%;
+    @include graph-sections;
+    .data {
+        display: table-cell;
+        vertical-align: top;
+        width: 20%;
+    }
+    .graph-header {
+        background: darken($main-color,10%);
+        border-radius: 5px 0 0 5px;
+    }
+    @media only screen and (max-width: 900px) {
+        width: 60%;
+        .graph-header {
+            border-radius: 0;
+        }
+    }
+}
+
+.backend {
+    width: 10%;
+    @include graph-sections;
+    .data {
+        display: table-cell;
+        vertical-align: top;
+        width: 50%;
+    }
+   .graph-header {
+        background: darken($main-color,5%);
+    }
+    @media only screen and (max-width: 900px) {
+        width: 60%;
+    }
+}
+
+.programming {
+    width: 14%;
+    @include graph-sections;
+    .data {
+        display: table-cell;
+        vertical-align: top;
+        width: 50%;
+    }
+   .graph-header {
+        background: $main-color;
+    }
+    @media only screen and (max-width: 900px) {
+        width: 60%;
+    }  
+}
+
+.adobe {
+    width: 10%;
+    @include graph-sections;
+    .data {
+        display: table-cell;
+        vertical-align: top;
+        width: 50%;
+    }
+   .graph-header {
+        background: lighten($main-color,5%);
+    }
+    @media only screen and (max-width: 900px) {
+        width: 60%;
+    }
+    
+}
+
+.other {
+    width: 18%;
+    @include graph-sections;
+    .data {
+        display: table-cell;
+        vertical-align: top;
+        width: 33.33333%;
+    }
+   .graph-header {
+        background: lighten($main-color,10%);
+        border-radius: 0 5px 5px 0;
+    }
+    @media only screen and (max-width: 900px) {
+        width: 60%;
+        .graph-header {
+            border-radius: 0;
+        }
+    }
+    
+}
+
+// Highlights bar and skill title on mouse hover to better distinguish which bar matches with which level.
+.data:hover {
+    label {
+        color: #ccc;
+    }
+}
+
+// Style for skill names
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+
+#portfolio {
+    text-align: center;
+    margin: 0 3.5em;
+    h2 {
+        font-family: Georgia, serif;
+        font-weight: 300;
+        border-bottom: 1px solid #dbd9d4;
+        font-variant: small-caps;
+        line-height: 2em;
+        margin-left: -1.5%;
+        margin-bottom: 2em;
+    }
+    #p-container {
+        margin: 0 auto;
+        width: 95.5%;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+        overflow: hidden;
+        margin-left: -7%;
+        li {
+            display: inline-block;
+            float: left;
+            width: 15%;
+            margin-left: 5%;
+            position: relative;
+            margin-top: 0.5%;
+            a {
+                text-decoration: none;
+                color: #000
+            }
+            img {
+                width: 100%;
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+            h5 {
+                margin: 0;
+                line-height: 3em;
+                font-family: Georgia, sans-serif;
+                font-weight: 300;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                font-size: 0.7em;
+            }
+        }
+    }
+    @media only screen and (max-width: 1000px) {
+        ul {
+            li {
+                width: 20%;
+            }
+        }
+    }
+    @media only screen and (max-width: 768px) {
+        ul {
+            li {
+                width: 28.33%;
+            }
+        }
+    }
+    @media only screen and (max-width: 500px) {
+        margin: 0 0.5em;
+        h2 {
+            font-size: 1.25em;
+            margin: 0;
+        }
+        #p-container {
+            width: 100%;
+        }
+        ul {
+            margin-left: -1.5%;
+            li {
+                width: 31.83%;
+                margin-left: 1.5%;
+                h5 {
+                    display: none;
+                }
+            }
+        }
     }
 }
